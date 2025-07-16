@@ -8,8 +8,8 @@ const Navigation = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Features", href: "#features" },
+    { name: "Home", href: "/" },
+    { name: "Features", href: "/features" },
     { name: "Products", href: "#products" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" }
@@ -45,7 +45,7 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" onClick={() => window.location.href = '/login'}>
               Login
             </Button>
             <Button variant="hero" size="sm">
@@ -76,7 +76,7 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" onClick={() => window.location.href = '/login'}>
                   Login
                 </Button>
                 <Button variant="hero" size="sm">
